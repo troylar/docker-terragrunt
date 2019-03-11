@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:latest
+FROM hashicorp/terraform:0.11.13
 MAINTAINER troylar <troylar@gmail.com>
 USER root
 
@@ -8,7 +8,6 @@ RUN apk -v --update add \
 
 RUN pip install --upgrade pip && pip install --upgrade awscli s3cmd
 
-ENV TERRAFORM_VERSION=latest
 ENV ALKS_PROVIDER_VERSION=1.2.1
 ENV TERRAGRUNT_VERSION=0.18.1
 ENV TERRAGRUNT_TFPATH=/bin/terraform
